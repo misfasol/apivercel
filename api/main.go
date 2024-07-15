@@ -9,5 +9,5 @@ var contador int
 
 func Handler(w http.ResponseWriter, r *http.Request) {
 	contador++
-	fmt.Fprintf(w, "%v", contador)
+	fmt.Fprintf(w, "%v: %v", contador, r.URL)
 }
