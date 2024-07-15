@@ -5,6 +5,9 @@ import (
 	"net/http"
 )
 
+var contador int
+
 func Handler(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<h2> Resposta bem sucedida </h2>")
+	contador++
+	fmt.Fprintf(w, "%v", contador)
 }
